@@ -1111,6 +1111,7 @@ WEBLATE_ADDONS = [
     "weblate.addons.generate.PseudolocaleAddon",
     "weblate.addons.generate.PrefillAddon",
     "weblate.addons.json.JSONCustomizeAddon",
+    "weblate.addons.xml.XMLCustomizeAddon",
     "weblate.addons.properties.PropertiesSortAddon",
     "weblate.addons.git.GitSquashAddon",
     "weblate.addons.removal.RemoveComments",
