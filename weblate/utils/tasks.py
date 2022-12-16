@@ -155,9 +155,8 @@ def database_backup():
             raise
 
         if compress:
-            with open(out_plain, "rb") as f_in:
-                with gzip.open(out_compressed, "wb") as f_out:
-                    shutil.copyfileobj(f_in, f_out)
+            with open(out_plain, "rb") as f_in, gzip.open(out_compressed, "wb") as f_out:
+                shutil.copyfileobj(f_in, f_out)
             os.unlink(out_plain)
 
 

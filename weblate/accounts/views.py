@@ -119,7 +119,6 @@ from weblate.utils import messages
 from weblate.utils.errors import add_breadcrumb, report_error
 from weblate.utils.ratelimit import (
     check_rate_limit,
-    reset_rate_limit,
     session_ratelimit_post,
 )
 from weblate.utils.request import get_ip_address, get_user_agent

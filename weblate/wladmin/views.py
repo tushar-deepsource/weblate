@@ -532,8 +532,7 @@ class GroupListView(FormMixin, ListView):
         form = self.get_form()
         if form.is_valid():
             return self.form_valid(form)
-        else:
-            return self.form_invalid(form)
+        return self.form_invalid(form)
 
     def form_valid(self, form):
         form.save()
@@ -577,8 +576,7 @@ class GroupUpdateView(UpdateView):
         if form.is_valid() and formset.is_valid():
             formset.save()
             return self.form_valid(form)
-        else:
-            return self.form_invalid(form, formset)
+        return self.form_invalid(form, formset)
 
     def form_invalid(self, form, formset):
         """If the form is invalid, render the invalid form."""

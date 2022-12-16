@@ -25,9 +25,6 @@ from weblate.utils.checks import weblate_check
 
 def check_machinery(app_configs, **kwargs):
     from weblate.machinery.models import MACHINERY
-
-    # Needed to load the data
-    MACHINERY.data
     return [
         weblate_check(
             f"weblate.W039.{key.split('.')[-1]}",

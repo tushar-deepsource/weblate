@@ -487,12 +487,14 @@ def check_suggest_permissions(request, mode, unit, suggestion):
                 request, _("You do not have privilege to delete suggestions!")
             )
             return False
-    elif mode in ("upvote", "downvote"):
-        if not user.has_perm("suggestion.vote", unit):
-            messages.error(
-                request, _("You do not have privilege to vote for suggestions!")
-            )
-            return False
+    elif (
+        mode in ("upvote", "downvote")
+        and not user.has_perm("suggestion.vote", unit)
+    ):
+        messages.error(
+            request, _("You do not have privilege to vote for suggestions!")
+        )
+        return False
     return True
 
 
