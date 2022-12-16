@@ -1239,9 +1239,8 @@ class VCSSubversionTest(VCSGitTest):
         self.assertIn("nothing to commit", status)
 
     def test_configure_remote(self):
-        with self.repo.lock:
-            with self.assertRaises(RepositoryException):
-                self.repo.configure_remote("pullurl", "pushurl", "branch")
+        with self.repo.lock, self.assertRaises(RepositoryException):
+            self.repo.configure_remote("pullurl", "pushurl", "branch")
         self.verify_pull_url()
 
     def test_configure_remote_no_push(self):

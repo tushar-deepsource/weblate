@@ -224,13 +224,6 @@ GITLAB_CREDENTIALS = {}
 # Authentication configuration
 AUTHENTICATION_BACKENDS = (
     "social_core.backends.email.EmailAuth",
-    # "social_core.backends.google.GoogleOAuth2",
-    # "social_core.backends.github.GithubOAuth2",
-    # "social_core.backends.bitbucket.BitbucketOAuth2",
-    # "social_core.backends.suse.OpenSUSEOpenId",
-    # "social_core.backends.ubuntu.UbuntuOpenId",
-    # "social_core.backends.fedora.FedoraOpenId",
-    # "social_core.backends.facebook.FacebookOAuth2",
     "weblate.accounts.auth.WeblateUserBackend",
 )
 
@@ -524,23 +517,6 @@ if not HAVE_SYSLOG:
 
 # List of machine translations
 MT_SERVICES = (
-    #     "weblate.machinery.apertium.ApertiumAPYTranslation",
-    #     "weblate.machinery.baidu.BaiduTranslation",
-    #     "weblate.machinery.deepl.DeepLTranslation",
-    #     "weblate.machinery.glosbe.GlosbeTranslation",
-    #     "weblate.machinery.google.GoogleTranslation",
-    #     "weblate.machinery.googlev3.GoogleV3Translation",
-    #     "weblate.machinery.libretranslate.LibreTranslateTranslation",
-    #     "weblate.machinery.microsoft.MicrosoftCognitiveTranslation",
-    #     "weblate.machinery.microsoftterminology.MicrosoftTerminologyService",
-    #     "weblate.machinery.modernmt.ModernMTTranslation",
-    #     "weblate.machinery.mymemory.MyMemoryTranslation",
-    #     "weblate.machinery.netease.NeteaseSightTranslation",
-    #     "weblate.machinery.tmserver.AmagamaTranslation",
-    #     "weblate.machinery.tmserver.TMServerTranslation",
-    #     "weblate.machinery.yandex.YandexTranslation",
-    #     "weblate.machinery.saptranslationhub.SAPTranslationHub",
-    #     "weblate.machinery.youdao.YoudaoTranslation",
     "weblate.machinery.weblatetm.WeblateTranslation",
     "weblate.memory.machine.WeblateMemory",
 )
@@ -787,6 +763,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap3"
 #     "weblate.addons.generate.PseudolocaleAddon",
 #     "weblate.addons.generate.PrefillAddon",
 #     "weblate.addons.json.JSONCustomizeAddon",
+#     "weblate.addons.xml.XMLCustomizeAddon",
 #     "weblate.addons.properties.PropertiesSortAddon",
 #     "weblate.addons.git.GitSquashAddon",
 #     "weblate.addons.removal.RemoveComments",

@@ -163,10 +163,9 @@ def show_check_project(request, name, project):
     }
 
     form = FilterForm(request.GET)
-    if form.is_valid():
-        if form.cleaned_data.get("lang"):
-            kwargs["translation__language__code"] = form.cleaned_data["lang"]
-            url_params["lang"] = form.cleaned_data["lang"]
+    if form.is_valid() and form.cleaned_data.get("lang"):
+        kwargs["translation__language__code"] = form.cleaned_data["lang"]
+        url_params["lang"] = form.cleaned_data["lang"]
 
     components = (
         Component.objects.filter_access(request.user)

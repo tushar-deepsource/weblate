@@ -1914,6 +1914,7 @@ example:
         "weblate.addons.flags.BulkEditAddon",
         "weblate.addons.generate.GenerateFileAddon",
         "weblate.addons.json.JSONCustomizeAddon",
+        "weblate.addons.xml.XMLCustomizeAddon",
         "weblate.addons.properties.PropertiesSortAddon",
         "weblate.addons.git.GitSquashAddon",
         "weblate.addons.removal.RemoveComments",

@@ -434,8 +434,7 @@ class TranslationFormat:
     def is_valid(self):
         """Check whether store seems to be valid."""
         for unit in self.content_units:
-            # Just make sure that id_hash can be calculated
-            unit.id_hash
+            pass
         return True
 
     @classmethod

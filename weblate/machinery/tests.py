@@ -360,10 +360,10 @@ class BaseMachineTranslationTest(TestCase):
         return translation
 
     def mock_empty(self):
-        pass
+        raise NotImplementedError()
 
     def mock_response(self):
-        pass
+        raise NotImplementedError()
 
     def mock_error(self):
         raise SkipTest("Not tested")
@@ -1235,7 +1235,7 @@ class AWSTranslationTest(BaseMachineTranslationTest):
         raise SkipTest("Not tested")
 
     def mock_response(self):
-        pass
+        raise NotImplementedError()
 
     def test_translate(self, **kwargs):
         machine = self.get_machine()

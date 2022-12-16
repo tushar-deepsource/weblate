@@ -158,7 +158,7 @@ class BaseAddon:
             self.daily(component)
 
     def post_uninstall(self):
-        pass
+        raise NotImplementedError()
 
     def save_state(self):
         """Save add-on state information."""

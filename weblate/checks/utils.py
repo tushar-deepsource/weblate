@@ -37,9 +37,9 @@ def highlight_pygments(source: str, unit):
                 if text[0] == "`" and text != "`_":
                     yield ((start, start + 1, "`"))
                 else:
-                    yield ((start, start + len(text), text))
+                    yield start, start + len(text), text
             elif token == Token.Literal.String.Interpol:
-                yield ((start, start + len(text), text))
+                yield start, start + len(text), text
             elif token == Token.Generic.Strong:
                 end = start + len(text)
                 yield (start, start + 2, "**")

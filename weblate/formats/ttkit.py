@@ -257,7 +257,6 @@ class TTKitFormat(TranslationFormat):
         """Perform optional fixups on store."""
         if self.force_encoding is not None:
             store.encoding = self.force_encoding
-        return
 
     def load(self, storefile, template_store):
         """Load file using defined loader."""
@@ -1958,8 +1957,6 @@ class StringsdictFormat(DictStoreMixin, TTKitFormat):
         plural = super().get_plural(language, store)
         if plural.type in ZERO_PLURAL_TYPES:
             return plural
-
-        from weblate.lang.models import Plural
 
         return language.plural_set.get_or_create(
             source=Plural.SOURCE_STRINGSDICT,
